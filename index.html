@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Visualization</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="legendary-dropdown" style="float: right; position: relative">
+        <p style="margin-bottom: 0px">Legendary</p>
+        <div class="legendary-options">
+            <select id="legendary" style="width: 150px"> Generation
+                <option value="legendaryAll">(All)</option>
+                <option value="False">False</option>
+                <option value="True">True</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="generation-dropdown" style="float: right; clear:both">
+        <p style="margin-bottom: 0px">Generation (group)</p>
+        <div class="generation-options">
+        <select id="generation" style="width: 150px"> Generation
+            <option value="genAll">(All)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="type-legend" style="float: right; clear: both">
+        <p style="margin-bottom: 5px">Type</p>
+        <div class="type-colors" style="width: 150px; list-style: none">
+            <li span style="background: #4E79A7">Bug</li>
+            <li span style="background: #A0CBE8">Dark</li>
+            <li span style="background: #FCD745">Dragon</li>
+            <li span style="background: #F28E2B">Electric</li>
+            <li span style="background: #FFBE7D">Fairy</li>
+            <li span style="background: #59A14F">Fighting</li>
+            <li span style="background: #8CD17D">Fire</li>
+            <li span style="background: #D5A5C9">Flying</li>
+            <li span style="background: #B6992D">Ghost</li>
+            <li span style="background: #499894">Grass</li>
+            <li span style="background: #86BCB6">Ground</li>
+            <li span style="background: #FABFD2">Ice</li>
+            <li span style="background: #E15759">Normal</li>
+            <li span style="background: #FF9D9A">Poison</li>
+            <li span style="background: #79706E">Psychic</li>
+            <li span style="background: #966C5D">Rock</li>
+            <li span style="background: #BAB0AC">Steel</li>
+            <li span style="background: #D37295">Water</li>
+        </div>
+    </div>
+
+    <style>
+        div.tooltip {	
+            position: absolute;			
+            text-align: center;			
+            width: 300px;					
+            height: 42px;					
+            padding: 2px;				
+            font: 12px times;		
+            background: lightpink;
+            opacity: 60%;	
+            border: 0px;		
+            border-radius: 3px;			
+            pointer-events: none;			
+        }
+    </style>
+
+    <script src="pokemon.js"></script>
+  </body>
+</html>
